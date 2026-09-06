@@ -1,18 +1,92 @@
-# React + Vite
+# Social Media App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack social media web application built with **React.js and Firebase**, designed to provide a modern platform for users to connect, share posts, interact with others, and communicate in real time.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* 🔐 User Signup & Login with Firebase Authentication
+* 👤 User Profile Management
+* 📝 Create, Edit & Delete Posts
+* ❤️ Like & Dislike Posts
+* 💬 Comments & Replies
+* 👥 Follow & Unfollow Users
+* 🔔 Real-Time Notifications
+* 💬 Real-Time Chat & Messaging
+* 🟢 Online/Offline Status
+* 🔎 Search Users and Posts
+* 💾 Save Posts
+* 🌙 Dark Mode
+* 🖼️ Image Upload
+* 📱 Responsive User Interface
 
-## React Compiler
+## 🛠️ Technologies Used
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+### Frontend
 
-Note: This will impact Vite dev & build performances.
+* React.js
+* Vite
+* HTML5
+* CSS3
+* JavaScript
+* Bootstrap
 
-## Expanding the ESLint configuration
+### Backend & Database
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Firebase Authentication
+* Firebase Firestore
+* Firebase Storage
+
+### Other Tools
+
+* Git
+* GitHub
+* VS Code
+
+## 📂 Project Structure
+
+```text
+social-media-app/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── assets/
+│   ├── App.jsx
+│   └── main.jsx
+├── public/
+├── .gitignore
+├── package.json
+└── README.md
+```
+
+
+## 🔥 Firebase Setup
+
+This project uses Firebase for:
+
+* Authentication
+* Firestore Database
+* Storage
+* Real-time application data
+
+Create your own Firebase project and add your Firebase configuration to the project.
+
+For production, make sure Firestore Security Rules are properly configured.
+
+## 📌 Future Improvements
+
+* Real-time typing indicator improvements
+* Post sharing
+* User blocking
+* Advanced search
+* Video/reel support
+* Improved notification system
+* Deployment and performance optimization
+
+## 👨‍💻 Author
+
+**Gyani Kumar**
+
+B.Tech Computer Science & Engineering
+
+
+
