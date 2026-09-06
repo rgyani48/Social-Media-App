@@ -527,20 +527,17 @@
 
 }
 
-/* Dropdown Menu */
 
 .sidebar .dropdown-menu {
   position: absolute !important;
   left: 0 !important;
   right: auto !important;
   top: -5px !important;
-  /* zarurat ho to -60 ya -80 adjust kar lena */
   width: 200px;
   border-radius: 12px;
   z-index: 9999;
 }
 
-/* Logout */
 
 .logout-btn {
   width: 100%;
@@ -558,31 +555,23 @@
   background: #bb2d3b;
 }
 
-/* sidebar css khatam */
 
-/* index.css ya App.css mein sabse niche add karein */
 
 .custom-consistent-hr {
   height: 2px;
-  /* Line ki motai */
+
   border: none;
-  /* Default border hatayein */
+
   opacity: 1 !important;
-  /* Bootstrap ka default opacity effect hatayein */
   margin: 0;
-  /* unwanted margin hatayein */
 }
 
-/* Light Mode ke liye */
 body:not(.dark-mode) .custom-consistent-hr {
   background-color: #000000;
-  /* Solid Black */
 }
 
-/* Dark Mode ke liye (agar aapki body par .dark-mode class hai) */
 body.dark-mode .custom-consistent-hr {
   background-color: #ffffff;
-  /* Solid White */
 }
 
 header {
@@ -629,23 +618,7 @@ header {
   margin-left: -17px;
 }
 
-/* .Search {
-  background-color: #212529 !important;
-  color: white !important;
-  border: 1px solid #6c757d !important;
-}
 
-.Search::placeholder {
-  color: #adb5bd !important;
-  opacity: 1;
-}
-
-.Search:focus {
-  background-color: #212529 !important;
-  color: white !important;
-  border-color: #0d6efd !important;
-  box-shadow: none !important;
-} */
 
 .reaction-btn {
   cursor: pointer;
@@ -682,7 +655,8 @@ header {
 
 .Mycard {
   max-width: 25rem;
-  margin: 20px 20px 0 100px;
+  width: 100%;
+  margin: 20px auto;   /* ✅ centers regardless of screen width */
   overflow: hidden;
 }
 
@@ -1204,14 +1178,12 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* Saari cheezein center mein rahengi */
   width: 100%;
 }
 
 .profile-card {
   width: 100%;
-  max-width: 6000px;
-  /* Profile card ki width ko control karne ke liye */
+  
   margin-bottom: 20px;
 }
 
@@ -1224,7 +1196,7 @@ header {
   width: 100%;
   max-width: 600px;
   text-align: left;
-  /* Ya fir center agar beech mein chahiye */
+  font-size: 20px;
 }
 
 .profile-image {
@@ -1311,14 +1283,12 @@ header {
   margin-bottom: 25px;
 }
 
-/* Form ko card ke andar poori jagah do */
 .login-card form {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-/* Inputs aur button ki width ab 100% fix rahegi */
 .login-card input {
   width: 100%;
   height: 50px;
@@ -1536,5 +1506,280 @@ header {
 
   100% {
     opacity: 0.2;
+  }
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+/* Tablet */
+/* =========================================
+   RESPONSIVE DESIGN (Updated to 768px)
+   ========================================= */
+
+/* Tablet View (769px se 991px tak) */
+@media (min-width: 769px) and (max-width: 991px) {
+  .sidebar {
+    width: 80px;
+  }
+
+  .content {
+    width: calc(100% - 80px);
+    margin-left: 80px;
+  }
+
+  .sidebar-link {
+    justify-content: center;
+    padding: 12px 8px;
+    gap: 0;
+  }
+
+  .sidebar-link span {
+    display: none;
+  }
+
+  .profile-box {
+    justify-content: center;
+  }
+
+  .profile-box .username,
+  .profile-status {
+    display: none;
+  }
+
+  .Mycard {
+    max-width: 500px;
+    width: calc(100% - 30px);
+    margin: 20px auto;
+  }
+}
+
+/* MOBILE VIEW (768px ya usse kam - Ab 610px aur iPhone dono par chalega) */
+@media (max-width: 768px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  #root {
+    width: 100%;
+  }
+
+  .header {
+    height: 60px;
+    padding: 0 12px;
+    width: 100%;
+  }
+
+  .Logo {
+    margin-left: 0;
+    font-size: 20px;
+  }
+
+  /* Bottom Navigation Bar for Mobile (Fixed with right: 0) */
+  .sidebar {
+    position: fixed !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    top: auto !important;
+    width: 100% !important;
+    height: 60px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-around !important;
+    z-index: 1000 !important;
+    background: white;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 !important;
+  }
+
+  .dark-mode .sidebar {
+    background: #1f1f1f !important;
+  }
+
+  .sidebar-link {
+    width: auto !important;
+    padding: 8px !important;
+    margin: 0 !important;
+    border-radius: 10px !important;
+    justify-content: center !important;
+    gap: 0 !important;
+  }
+
+  .sidebar-link span {
+    display: none !important;
+  }
+
+  .sidebar-link svg {
+    font-size: 20px;
+  }
+
+  .sidebar-profile {
+    display: none !important;
+  }
+
+  .content {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding-bottom: 80px !important;
+  }
+
+  .Mycard,
+  .insta-card {
+    width: calc(100% - 20px) !important;
+    max-width: none !important;
+    margin: 10px auto !important;
+    border-radius: 10px !important;
+  }
+
+  .MyImage {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+  }
+
+  .post-header {
+    padding: 10px;
+  }
+
+  .profile-section {
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .profile-section h6 {
+    font-size: 14px;
+  }
+
+  .profile-section small {
+    font-size: 11px;
+  }
+
+  .reaction {
+    width: 100%;
+    padding: 8px 5px;
+  }
+
+  .reaction-left {
+    gap: 12px;
+  }
+
+  .icon-btn,
+  .save-icon {
+    font-size: 21px;
+  }
+
+  .count {
+    font-size: 12px;
+    margin-left: -10px;
+  }
+
+  .comment-input-box {
+    width: 100%;
+    gap: 5px;
+  }
+
+  .comment-input {
+    min-width: 0;
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .comment-btn {
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .comment-item {
+    padding: 8px 30px 8px 8px;
+  }
+
+  .comment-content span {
+    font-size: 13px;
+    overflow-wrap: anywhere;
+  }
+
+  .CreatePost {
+    width: calc(100% - 20px);
+    margin: 10px auto;
+  }
+
+  .profile-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .profile-card,
+  .my-posts,
+  .my-post-title {
+    width: 100%;
+  }
+
+  .profile-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .profile-follow-stats {
+    gap: 25px;
+  }
+
+  .profile-follow-stats h5 {
+    font-size: 18px;
+  }
+
+  .notification-dropdown {
+    position: fixed;
+    top: 60px;
+    right: 5px;
+    left: 5px;
+    width: auto;
+    max-width: none;
+  }
+
+  .zoom-image {
+    max-width: 95%;
+    max-height: 80%;
+  }
+
+  .close-image {
+    top: 15px;
+    right: 15px;
+    font-size: 30px;
+  }
+
+  .download-image-btn {
+    bottom: 20px;
+  }
+
+  .login-card,
+  .auth-page-wrapper .auth-card {
+    width: 100% !important;
+    max-width: 420px !important;
+    padding: 28px 20px !important;
+  }
+
+  .login-card h1,
+  .auth-page-wrapper .auth-card h1 {
+    font-size: 30px;
+  }
+
+  .auth-page-wrapper {
+    padding: 15px;
+  }
+
+  .toast-box {
+    left: 10px;
+    right: 10px;
+    top: 70px;
+    width: auto;
+    text-align: center;
   }
 }
